@@ -1,0 +1,152 @@
+*,not(body,html) {
+	margin: 0;
+	padding: 0;
+	font-size: xx-large;
+}
+/*-------------------------------------*/
+body {
+	background: purple;
+}
+/*-------------------------------------*/
+.container {
+	position: fixed;
+	transition: all 1s;
+	width: 500px;
+	height: 500px;
+	/*filter: blur(0);*/
+}
+/*-------------------------------------*/
+.main {
+	position: absolute;
+	width: 95%;
+	height: 95%;
+	background: #fff8;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 10px;
+}
+/*-------------------------------------*/
+.header {
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	background: #fff8;
+	border-radius: 10px;
+}
+/*-------------------------------------*/
+td {
+	background: #fff8;
+	border-radius: 100%;
+	transition: transform 200ms;
+}
+/*------------------------------------------*/
+
+td#checked{
+	transform: scale(-1,1);
+	background: #ccc8;
+}
+
+/*------------------------------------------*/
+td:hover:not(#checked):not(#mine) {
+	background: #fff;
+}
+/*-------------------------------------*/
+table {
+	position: relative;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-spacing: 4px;
+	width: 90%;
+	height: 90%;
+}
+/*----------------------------------------*/
+.time {
+	position: absolute;
+	font-size: xx-large;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+}
+/*------------------------------------*/
+.mines {
+	position: relative;
+	float: right;
+	font-size: xx-large;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+}
+/*-----------------------------------------*/
+
+p{
+	position: absolute;
+	opacity: 0;
+	left: 50%;
+	top: 50%;
+	transform: scale(-1,1) translate(50%,-125%);
+}
+#checked p{
+	color: white;
+	opacity: 1
+}
+/*-----------------------------------------*/
+.lose {
+	display: none;
+	opacity: 0;
+	position: absolute;
+  background: #ffffff7a;
+  height: 160px;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: xxx-large;
+  z-index: 1;
+	border-radius: 45px;
+	overflow: hidden;
+	transition: opacity 1s;
+}
+/*-----------------------------------------------*/
+.head {
+	background: #ffffff7a;
+}
+/*-----------------------------------------------------*/
+.button:not(#repl) {
+    width: 177px;
+}
+
+.button:hover {
+    background: #0000ff38;
+}
+
+.button:active {
+    background: #fff0;
+}
+
+.close {
+    position: absolute;
+    background: #ff000087;
+    width: 52px;
+    height: 100%;
+    left: 100%;
+    transform: translate(-100%,-100%);
+}
+
+.close:hover {
+    background: red;
+}
+.button {
+    font-size: xx-large;
+		background: #0000ff1a;
+		cursor: default;
+		margin: 10px;
+		border-radius: inherit;
+		width: 375px;
+}
+/*------------------------------------------------------*/
+td#mine {
+	background: url("mine.svg") right no-repeat;
+	background-size: contain;
+}
